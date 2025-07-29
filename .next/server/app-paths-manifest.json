@@ -1,8 +1,8 @@
 {
-  "/page": "app/page.js",
+  "/not-found": "app/not-found.js",
   "/lineup/page": "app/lineup/page.js",
   "/gallery/page": "app/gallery/page.js",
-  "/merch/page": "app/merch/page.js",
   "/volunteer/page": "app/volunteer/page.js",
-  "/donate/page": "app/donate/page.js"
+  "/donate/page": "app/donate/page.js",
+  "/merch/page": "app/merch/page.js"
 }
