@@ -8,12 +8,12 @@
 }
 
 :root {
-  --primary-color: #ff6b35;
-  --secondary-color: #f7931e;
-  --accent-color: #c5d86d;
-  --dark-color: #2c3e50;
-  --light-color: #ecf0f1;
-  --gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #c5d86d 100%);
+  --primary-color: #00b3e6;
+  --secondary-color: #fea34b;
+  --accent-color: #7bd3f5;
+  --dark-color: #18191b;
+  --light-color: #ffffff;
+  --gradient: linear-gradient(135deg, #00b3e6 98%, #7bd3f5 2%);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   --border-radius: 12px;
 }
@@ -27,6 +27,8 @@ body {
   line-height: 1.6;
   color: var(--dark-color);
   background-color: #fafafa;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 /* Typography */
@@ -56,8 +58,9 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   color: #555;
+  font-weight: 600;
 }
 
 /* Layout */

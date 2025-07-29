@@ -23,20 +23,23 @@ export default function Header() {
       <nav className="container">
         <div className="nav-content">
           <Link href="/" className="logo">
-            <h2>🎵 Oceanside Festival</h2>
+            <h2>[SOBP]</h2>
           </Link>
           
           <div className={`nav-links ${mobileMenuOpen ? 'nav-open' : ''}`}>
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-link ${pathname === item.href ? 'nav-active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
+              {navItems.map((item, idx) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`btn ${idx === 0 ? 'btn-secondary' : 'btn-primary'}`}
+                  style={{ width: '100%' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
           
           <button 
@@ -75,11 +78,30 @@ export default function Header() {
         }
         
         .nav-links {
+          position: fixed;
+          top: 64px;
+          left: 0;
+          right: 0;
+          background: white;
+          flex-direction: column;
+          padding: 2rem;
+          box-shadow: var(--shadow);
+          transform: translateY(-100%);
+          opacity: 0;
+          transition: all 0.3s ease;
+          z-index: 2000;
           display: flex;
           gap: 2rem;
           align-items: center;
+          pointer-events: none;
         }
-        
+
+        .nav-links.nav-open {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+
         .nav-link {
           color: var(--dark-color);
           text-decoration: none;
@@ -87,11 +109,11 @@ export default function Header() {
           transition: color 0.3s ease;
           position: relative;
         }
-        
+
         .nav-link:hover {
           color: var(--primary-color);
         }
-        
+
         .nav-link.nav-active::after {
           content: '';
           position: absolute;
@@ -102,16 +124,16 @@ export default function Header() {
           background: var(--gradient);
           border-radius: 1px;
         }
-        
+
         .mobile-menu-toggle {
-          display: none;
+          display: flex;
           flex-direction: column;
           background: none;
           border: none;
           cursor: pointer;
           padding: 0.5rem;
         }
-        
+
         .mobile-menu-toggle span {
           width: 25px;
           height: 3px;
@@ -120,32 +142,14 @@ export default function Header() {
           border-radius: 2px;
           transition: 0.3s;
         }
-        
+
+        .logo h2 {
+          color: var(--primary-color);
+          margin: 0;
+          font-size: 1.5rem;
+        }
+
         @media (max-width: 768px) {
-          .nav-links {
-            position: fixed;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background: white;
-            flex-direction: column;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            transform: translateY(-100%);
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 999;
-          }
-          
-          .nav-links.nav-open {
-            transform: translateY(0);
-            opacity: 1;
-          }
-          
-          .mobile-menu-toggle {
-            display: flex;
-          }
-          
           .logo h2 {
             font-size: 1.2rem;
           }
