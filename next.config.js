@@ -28,7 +28,7 @@ const nextConfig = {
   
   // Environment variables available to the browser
   env: {
-    SITE_NAME: 'Oceanside Community Music Festival',
+    SITE_NAME: 'South O Annual Block Party',
     SITE_URL: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000',
   },
   

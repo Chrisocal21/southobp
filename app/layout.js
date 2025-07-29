@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'Oceanside Community Music Festival',
+  title: 'South O Annual Block Party',
   description: 'Join us for an amazing community music festival in beautiful Oceanside, California',
 }
 
