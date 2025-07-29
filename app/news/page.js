@@ -1,7 +1,5 @@
-export const metadata = {
-  title: 'Festival News - Oceanside Music Festival',
-  description: 'Latest news and updates from the Oceanside Community Music Festival',
-}
+
+'use client'
 
 export default function News() {
   const newsArticles = [

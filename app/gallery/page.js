@@ -1,7 +1,5 @@
-export const metadata = {
-  title: 'Photo Gallery - Oceanside Music Festival',
-  description: 'View photos from past Oceanside Community Music Festival events',
-}
+
+'use client'
 
 export default function Gallery() {
   // Demo photo data - replace with actual photos
