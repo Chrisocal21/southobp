@@ -1,11 +1,7 @@
 
+
 'use client'
 import Link from 'next/link'
-
-export const metadata = {
-  title: 'About - Oceanside Music Festival',
-  description: 'Learn about the Oceanside Community Music Festival and our mission to celebrate local music',
-}
 
 export default function About() {
   return (
