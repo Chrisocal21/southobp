@@ -21,7 +21,7 @@ export default function Home() {
           <div className="grid grid-3">
             <div className="card fade-in-up">
               <h3>🎤 Amazing Artists</h3>
-              <p>Featuring local and touring musicians across multiple genres - from indie rock to folk, electronic to acoustic.</p>
+              <p>Featuring local and touring musicians across multiple genres - from classic rock and roll to speed rock, glam rock to punk rock.</p>
               <Link href="/lineup" className="btn btn-primary">See Full Lineup</Link>
             </div>
             <div className="card fade-in-up">
@@ -45,10 +45,10 @@ export default function Home() {
           <div className="grid grid-2">
             <div className="card">
               <h3>📅 When & Where</h3>
-              <p><strong>Date:</strong> July 15-16, 2024</p>
-              <p><strong>Time:</strong> 12:00 PM - 11:00 PM</p>
-              <p><strong>Location:</strong> Oceanside Beach Park</p>
-              <p><strong>Address:</strong> 123 Pacific Coast Hwy, Oceanside, CA</p>
+              <p><strong>Date:</strong> July TBA, 2026</p>
+              <p><strong>Time:</strong> 12:00 PM - 10:00 PM</p>
+              <p><strong>Location:</strong> South Oceanside, CA</p>
+              <p><strong>Address:</strong> Griffin Street, Oceanside, CA</p>
             </div>
             <div className="card">
               <h3>🎟️ Tickets & Pricing</h3>
