@@ -1,16 +1,22 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/lineup', label: 'Lineup' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/photouploader', label: 'Photo Uploader' },
     { href: '/about', label: 'About' },
     { href: '/volunteer', label: 'Volunteer' },
     { href: '/merch', label: 'Merch' },
@@ -26,7 +32,7 @@ export default function Header() {
             <h2>[SOBP]</h2>
           </Link>
           
-          <div className={`nav-links ${mobileMenuOpen ? 'nav-open' : ''}`}>
+          <div className={`nav-links ${mounted && mobileMenuOpen ? 'nav-open' : ''}`}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
               {navItems.map((item, idx) => (
                 <Link
