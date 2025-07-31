@@ -1,4 +1,3 @@
-
 'use client'
 import Link from 'next/link'
 
@@ -41,17 +40,33 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <p>📍 Oceanside, CA</p>
-            <p>📧 info@oceansidemusic.com</p>
-            <p>📞 (760) 555-MUSIC</p>
+            <p className="footer-email">
+              <span role="img" aria-label="Email">📧</span>
+              <span className="footer-email-text">davapalooza66@gmail.com</span>
+            </p>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 Oceanside Community Music Festival. All rights reserved.</p>
+          <p>&copy; 2025 South O Block Party. All rights reserved.</p>
         </div>
       </div>
       
       <style jsx>{`
+        .footer-email {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          flex-wrap: nowrap;
+        }
+        
+        .footer-email-text {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          min-width: 0;
+        }
+        
         .footer {
           background: #7bd3f5; /* Sky blue background */
           color: #18191b; /* Black for text */
@@ -128,6 +143,12 @@ export default function Footer() {
           .footer-content {
             grid-template-columns: 1fr;
             gap: 2rem;
+          }
+          
+          .footer-email-text {
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
           }
         }
       `}</style>
