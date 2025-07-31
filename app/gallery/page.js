@@ -1,7 +1,9 @@
 
 
+
 'use client'
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export default function Gallery() {
   // Demo photo data - replace with actual photos
@@ -36,9 +38,9 @@ export default function Gallery() {
   const [selectedYear, setSelectedYear] = useState(years[0]); // Default to most recent
   const selectedGallery = photoGalleries.find(g => String(g.year) === String(selectedYear));
 
-  // Debugging logs
-  console.log('selectedYear:', selectedYear);
-  console.log('selectedGallery:', selectedGallery);
+
+  // Lightbox state
+  const [lightboxImg, setLightboxImg] = useState(null);
 
   // Modal state for email popup
   const [showEmailModal, setShowEmailModal] = useState(false);
@@ -96,10 +98,14 @@ export default function Gallery() {
               selectedGallery.photos.map((photo) => (
                 <div key={photo.id} className="photo-item">
                   {selectedYear === '2025' && photo.src ? (
-                    <img
+                    <Image
                       src={photo.src}
                       alt={`2025 Block Party Photo ${photo.id}`}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }}
+                      width={400}
+                      height={300}
+                      style={{ objectFit: 'cover', borderRadius: 'inherit', width: '100%', height: '100%' }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      priority={photo.id === 1}
                     />
                   ) : (
                     <div className="photo-placeholder">
@@ -117,6 +123,8 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal for 2025 images removed */}
 
       {/* Upload Section */}
       <section className="section section-alt">
@@ -178,6 +186,16 @@ export default function Gallery() {
           max-width: 90vw;
           text-align: center;
           position: relative;
+        }
+        .modal-image {
+          background: transparent;
+          box-shadow: none;
+          padding: 0;
+          min-width: unset;
+          max-width: unset;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
         .photo-grid {
           display: grid;
