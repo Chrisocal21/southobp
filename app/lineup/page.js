@@ -13,7 +13,7 @@ export default function Lineup() {
     <>
       <section className="hero" style={{ padding: '4rem 0' }}>
         <div className="container">
-          <h1>Festival Lineup</h1>
+          <h1>Block Party Lineup</h1>
         </div>
       </section>
 

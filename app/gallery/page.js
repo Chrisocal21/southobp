@@ -59,7 +59,7 @@ export default function Gallery() {
       <section className="hero" style={{ padding: '4rem 0' }}>
         <div className="container">
           <h1>Photo Gallery</h1>
-          <p>Relive the magic of past Oceanside Music Festivals</p>
+          <p>Relive the magic of past South O Block Parties</p>
           <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             {years.map(yearStr => {
               const isSelected = String(selectedYear) === String(yearStr);

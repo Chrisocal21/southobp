@@ -8,75 +8,93 @@ export default function Merch() {
   const products = [
     {
       id: 1,
-      name: 'Festival T-Shirt',
+      name: 'Classic South O Tee',
       price: 25,
       category: 'apparel',
-      description: 'Soft cotton tee with festival logo and sunset design',
+      description: 'Soft cotton t-shirt with the classic South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Ocean Blue', 'Sunset Orange', 'Sand Beige']
+      colors: ['Ocean Blue', 'White', 'Black']
     },
     {
       id: 2,
-      name: 'Music Festival Hoodie',
-      price: 45,
+      name: 'Sunset Wave Tee',
+      price: 28,
       category: 'apparel',
-      description: 'Cozy hoodie perfect for beach bonfires',
+      description: 'Limited edition tee featuring a sunset wave design by a local artist.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Charcoal Gray', 'Navy Blue']
+      colors: ['Sunset Orange', 'Sand']
     },
     {
       id: 3,
-      name: 'Festival Poster 2024',
-      price: 15,
-      category: 'art',
-      description: 'Limited edition poster featuring this year\'s artwork',
-      sizes: ['18" x 24"'],
-      colors: ['Full Color']
+      name: 'Vintage Block Party Tee',
+      price: 30,
+      category: 'apparel',
+      description: 'Throwback style t-shirt with vintage South O graphics.',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      colors: ['Heather Gray', 'Navy']
     },
     {
       id: 4,
-      name: 'Oceanside Festival Hat',
+      name: 'South O Snapback Hat',
       price: 22,
       category: 'accessories',
-      description: 'Snapback cap with embroidered logo',
+      description: 'Snapback hat with embroidered South O Block Party logo.',
       sizes: ['One Size'],
-      colors: ['Black', 'Navy', 'Khaki']
+      colors: ['Black', 'Navy']
     },
     {
       id: 5,
-      name: 'Reusable Water Bottle',
-      price: 18,
+      name: 'Festival Dad Hat',
+      price: 20,
       category: 'accessories',
-      description: 'Eco-friendly steel bottle with festival design',
-      sizes: ['32oz'],
-      colors: ['Blue', 'Green', 'Purple']
+      description: 'Relaxed fit dad hat with a small South O patch.',
+      sizes: ['One Size'],
+      colors: ['Khaki', 'Light Blue']
     },
     {
       id: 6,
-      name: 'Vinyl Compilation Album',
-      price: 35,
-      category: 'music',
-      description: 'Features tracks from 2023 festival performers',
-      sizes: ['12" LP'],
-      colors: ['Clear Vinyl', 'Ocean Blue Vinyl']
+      name: 'Block Party Crewneck',
+      price: 40,
+      category: 'apparel',
+      description: 'Cozy crewneck sweatshirt with bold South O print.',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      colors: ['Forest Green', 'Gray']
     },
     {
       id: 7,
-      name: 'Festival Sticker Pack',
-      price: 8,
-      category: 'accessories',
-      description: 'Set of 6 waterproof stickers',
-      sizes: ['Various'],
-      colors: ['Multi-Color']
+      name: 'Sunset Zip Hoodie',
+      price: 45,
+      category: 'apparel',
+      description: 'Zip-up hoodie with a sunset back print and small chest logo.',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      colors: ['Charcoal', 'Sunset Orange']
     },
     {
       id: 8,
-      name: 'Beach Towel',
-      price: 30,
+      name: 'Classic Pullover Hoodie',
+      price: 42,
+      category: 'apparel',
+      description: 'Classic pullover sweatshirt with South O Block Party chest print.',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      colors: ['Navy', 'Heather Gray']
+    },
+    {
+      id: 9,
+      name: 'South O Sticker',
+      price: 3,
       category: 'accessories',
-      description: 'Large beach towel with festival artwork',
-      sizes: ['30" x 60"'],
-      colors: ['Tropical Sunset']
+      description: 'Vinyl sticker with the South O Block Party logo.',
+      sizes: ['3" x 3"'],
+      colors: ['Full Color']
+    },
+    {
+      id: 10,
+      name: 'Wave Sticker',
+      price: 3,
+      category: 'accessories',
+      description: 'Vinyl sticker featuring a wave and sun design.',
+      sizes: ['3" x 3"'],
+      colors: ['Full Color']
     }
   ]
 
@@ -102,12 +120,24 @@ export default function Merch() {
   return (
     <>
       {/* Header */}
+
       <section className="hero" style={{ padding: '4rem 0' }}>
         <div className="container">
-          <h1>Festival Merchandise</h1>
-          <p>Show your festival pride with official Oceanside Music Festival gear</p>
+          <h1>South O Block Party Merch 🎉</h1>
+          <p style={{ fontSize: '1.1rem', margin: '1.5rem 0 1rem 0', color: '#444' }}>
+            Buy local. Support the party. All proceeds fund the South O Block Party.
+          </p>
+          <div style={{ fontSize: '1.05rem', color: '#333', marginBottom: '1.2rem' }}>
+            <strong>Available:</strong> T-Shirts, Sweatshirts, Hats
+          </div>
+          <div style={{ fontWeight: 600, color: 'var(--primary-color)', marginBottom: '1.2rem', fontSize: '1.05rem' }}>
+             100% of sales go back to the event.
+          </div>
+          <div style={{ fontSize: '1.05rem', color: '#444', marginBottom: '1.2rem' }}>
+            Limited-edition merch drops at the party—get yours at the booth!
+          </div>
           {getTotalItems() > 0 && (
-            <div className="cart-indicator">
+            <div className="cart-indicator" style={{ marginTop: '2rem' }}>
               🛒 {getTotalItems()} item{getTotalItems() !== 1 ? 's' : ''} in cart
             </div>
           )}
@@ -207,40 +237,39 @@ export default function Merch() {
         <div className="container">
           <div className="grid grid-2">
             <div className="card">
-              <h3>📦 Shipping & Pickup</h3>
+                            <h3>🔄 Returns & Exchanges</h3>
               <ul style={{ lineHeight: '1.8' }}>
-                <li><strong>Free local pickup</strong> at festival merchandise booth</li>
-                <li><strong>$5 flat rate shipping</strong> within California</li>
-                <li><strong>$8 shipping</strong> to rest of US</li>
-                <li><strong>Pre-order for festival pickup</strong> and skip the lines</li>
-                <li><strong>Orders ship within 3-5 business days</strong></li>
+                <li><strong>All sales are final.</strong></li>
+                <li>No returns or refunds except for defective items.</li>
+                <li>Free size exchanges available at the festival booth (while supplies last).</li>
               </ul>
+              <div style={{ color: '#b94a48', fontWeight: 600, marginTop: '0.7rem' }}>
+                Please double-check your order before purchasing. If you have an issue with a defective item, contact us at the event.
+              </div>
             </div>
             <div className="card">
-              <h3>🔄 Returns & Exchanges</h3>
+              <h3>📦 Shipping & Pickup</h3>
               <ul style={{ lineHeight: '1.8' }}>
-                <li><strong>30-day return policy</strong> on unworn items</li>
-                <li><strong>Free size exchanges</strong> within 14 days</li>
-                <li><strong>Festival pickup available</strong> for exchanges</li>
-                <li><strong>Full refund</strong> if item is defective</li>
-                <li><strong>Store credit</strong> for returns after 30 days</li>
+                <li><strong>Free local pickup</strong> at the block party merch booth</li>
+                <li><strong>Shipping cost depends on what you order</strong> (calculated at checkout or by request)</li>
+                <li><strong>Pre-order for block party pickup</strong> and skip the lines</li>
+                <li><strong>Orders ship within 3-5 business days</strong> (unless otherwise noted)</li>
               </ul>
+              <div style={{ color: '#555', fontSize: '0.98rem', marginTop: '0.7rem' }}>
+                Shipping rates and options may vary depending on the item(s) purchased. If you have questions, please ask at the merch booth or email us.
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Community Message */}
       <section className="section section-alt">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2>Questions About Our Merch?</h2>
-          <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
-            Need help with sizing or have a custom order request? We're here to help!
+        <div className="container" style={{ textAlign: 'center', maxWidth: '700px' }}>
+          <h2 style={{ marginBottom: '1.5rem' }}>Your Merch, Your Community</h2>
+          <p style={{ fontSize: '1.15rem', color: '#444', lineHeight: '1.7' }}>
+            Every shirt, hat, sweatshirt and sticker you buy helps keep the South O Block Party going strong. We appreciate your support—see you at the party!
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="mailto:merch@oceansidemusic.com" className="btn btn-primary">Email Us</a>
-            <a href="#contact" className="btn btn-secondary">Contact Info</a>
-          </div>
         </div>
       </section>
 
