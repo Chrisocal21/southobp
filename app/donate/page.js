@@ -1,65 +1,90 @@
-'use client'
-import { useState } from 'react'
 
-export default function Donate() {
-  const [selectedAmount, setSelectedAmount] = useState('')
-  const [customAmount, setCustomAmount] = useState('')
-  const [donationType, setDonationType] = useState('one-time')
+"use client";
+import React, { useState } from 'react';
 
-  const predefinedAmounts = [25, 50, 100, 250, 500]
-
+export default function DonatePage() {
   const donationTiers = [
     {
       amount: '$25',
-      title: 'Music Supporter',
-      benefits: ['Recognition on our website', 'Thank you email with festival updates'],
-      icon: '🎵'
+      title: 'Supporter Tier 1',
+      benefits: [
+        'Thank you for supporting the Block Party!',
+        'Includes a Block Party sticker or koozie'
+      ],
+      icon: '🟢'
     },
     {
       amount: '$50',
-      title: 'Community Patron',
-      benefits: ['All Music Supporter benefits', 'Exclusive behind-the-scenes content', 'Festival sticker pack'],
-      icon: '🎸'
+      title: 'Supporter Tier 2',
+      benefits: [
+        'Sticker, koozie, and your choice of a hat or t-shirt',
+        'Plus a keychain bottle opener!'
+      ],
+      icon: '🧢'
     },
     {
       amount: '$100',
-      title: 'Festival Friend',
-      benefits: ['All Community Patron benefits', 'Official festival t-shirt', 'Early access to lineup announcements'],
-      icon: '🎤'
+      title: 'Supporter Tier 3',
+      benefits: [
+        'Sticker, koozie, hat, t-shirt, and keychain bottle opener',
+        'Perfect for repping the Block Party all year'
+      ],
+      icon: '👕'
+    },
+    {
+      amount: '$150',
+      title: 'Supporter Tier 4',
+      benefits: [
+        'Sticker, koozie, hat, t-shirt, sweatshirt, and keychain bottle opener',
+        'Get the full Block Party bundle!'
+      ],
+      icon: '🧥'
+    },
+    {
+      amount: '$200',
+      title: 'Supporter Tier 5',
+      benefits: [
+        '2x stickers, 2x koozies, hat, t-shirt, sweatshirt, and keychain bottle opener',
+        'Even more swag for your support'
+      ],
+      icon: '🎁'
     },
     {
       amount: '$250',
-      title: 'Music Champion',
-      benefits: ['All Festival Friend benefits', 'VIP parking pass', 'Meet & greet with select artists'],
-      icon: '🏆'
-    },
-    {
-      amount: '$500+',
-      title: 'Festival Sponsor',
-      benefits: ['All Music Champion benefits', 'Logo placement on festival materials', 'Recognition from main stage'],
+      title: 'Supporter Tier 6',
+      benefits: [
+        '2x stickers, 2x koozies, 2x hats, 2x t-shirts, 2x sweatshirts, 2x keychain bottle openers',
+        'Ultimate supporter bundle – thank you!'
+      ],
       icon: '⭐'
     }
-  ]
+  ];
+
+  const predefinedAmounts = [25, 50, 100, 150, 200, 250];
+
+  const [selectedAmount, setSelectedAmount] = useState('');
+  const [customAmount, setCustomAmount] = useState('');
+  const [donationType, setDonationType] = useState('one-time');
 
   const handleAmountSelect = (amount) => {
-    setSelectedAmount(amount)
-    setCustomAmount('')
-  }
+    setSelectedAmount(amount);
+    setCustomAmount('');
+  };
 
   const handleCustomAmountChange = (e) => {
-    setCustomAmount(e.target.value)
-    setSelectedAmount('')
-  }
+    setCustomAmount(e.target.value);
+    setSelectedAmount('');
+  };
 
   const handleDonate = (e) => {
-    e.preventDefault()
-    const amount = selectedAmount || customAmount
+    e.preventDefault();
+    const amount = selectedAmount || customAmount;
     if (!amount) {
-      alert('Please select or enter a donation amount.')
-      return
+      alert('Please select or enter a donation amount.');
+      return;
     }
-    alert(`Thank you for your ${donationType} donation of $${amount}! This would redirect to a payment processor.`)
-  }
+    alert(`Thank you for your ${donationType} donation of $${amount}! This would redirect to a payment processor.`);
+  };
 
   return (
     <>
@@ -122,26 +147,13 @@ export default function Donate() {
       <section className="section section-alt">
         <div className="container">
           <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>How Your Donation Helps</h2>
-          <div className="grid grid-3">
-            <div className="card">
-              <h3>🎤 Artist Support</h3>
+          <div className="grid grid-1" style={{ maxWidth: '700px', margin: '0 auto' }}>
+            <div className="card" style={{ textAlign: 'center', fontSize: '1.15rem', color: '#444', padding: '2rem' }}>
               <p>
-                We pay fair wages to all performing artists and provide professional sound equipment 
-                and stage production.
+                <strong>Every dollar you give goes directly back into the South O Block Party.</strong> Your support helps us cover essentials like permits, music, food, art, and all the details that make the event possible. There are no paid staff—just neighbors, volunteers, and local businesses working together to keep the party going year after year.
               </p>
-            </div>
-            <div className="card">
-              <h3>🎓 Music Education</h3>
               <p>
-                Surplus funds support music programs in local schools and provide scholarships 
-                for young musicians.
-              </p>
-            </div>
-            <div className="card">
-              <h3>🌍 Community Access</h3>
-              <p>
-                We offer free admission to low-income families and provide accessibility services 
-                for all attendees.
+                Thank you for helping us keep this community tradition alive!
               </p>
             </div>
           </div>
@@ -495,5 +507,5 @@ export default function Donate() {
         }
       `}</style>
     </>
-  )
+  );
 }

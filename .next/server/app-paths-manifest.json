@@ -1,8 +1,8 @@
 {
   "/not-found": "app/not-found.js",
-  "/photouploader/page": "app/photouploader/page.js",
-  "/lineup/page": "app/lineup/page.js",
   "/gallery/page": "app/gallery/page.js",
   "/volunteer/page": "app/volunteer/page.js",
-  "/merch/page": "app/merch/page.js"
+  "/news/page": "app/news/page.js",
+  "/merch/page": "app/merch/page.js",
+  "/donate/page": "app/donate/page.js"
 }

@@ -95,6 +95,24 @@ export default function Merch() {
       description: 'Vinyl sticker featuring a wave and sun design.',
       sizes: ['3" x 3"'],
       colors: ['Full Color']
+    },
+    {
+      id: 11,
+      name: 'Keychain Bottle Opener',
+      price: 5,
+      category: 'accessories',
+      description: 'Handy keychain bottle opener with South O Block Party branding.',
+      sizes: ['One Size'],
+      colors: ['Silver']
+    },
+    {
+      id: 12,
+      name: 'Block Party Koozie',
+      price: 5,
+      category: 'accessories',
+      description: 'Keep your drink cold with a South O Block Party koozie.',
+      sizes: ['One Size'],
+      colors: ['Blue', 'Black']
     }
   ]
 
@@ -168,12 +186,7 @@ export default function Merch() {
             {filteredProducts.map((product) => (
               <div key={product.id} className="product-card">
                 <div className="product-image">
-                  <div className="product-placeholder">
-                    {product.category === 'apparel' && '👕'}
-                    {product.category === 'accessories' && '🎒'}
-                    {product.category === 'art' && '🎨'}
-                    {product.category === 'music' && '🎵'}
-                  </div>
+                  <div className="coming-soon-badge">Coming Soon</div>
                 </div>
                 <div className="product-info">
                   <h3>{product.name}</h3>
@@ -187,7 +200,7 @@ export default function Merch() {
                     </div>
                   </div>
                   <div className="product-footer">
-                    <div className="price">${product.price}</div>
+                    <div className="price">TBA</div>
                     <button 
                       className="btn btn-primary"
                       onClick={() => addToCart(product)}
@@ -274,6 +287,21 @@ export default function Merch() {
       </section>
 
       <style jsx>{`
+        .coming-soon-badge {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+          color: #222;
+          font-weight: 700;
+          font-size: 1.1rem;
+          border-radius: 20px;
+          padding: 0.5rem 1.2rem;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+          margin: 0 auto;
+          margin-top: 60px;
+          width: fit-content;
+        }
         .cart-indicator {
           background: var(--accent-color);
           color: var(--dark-color);
