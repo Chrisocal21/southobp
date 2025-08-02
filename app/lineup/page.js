@@ -14,6 +14,9 @@ export default function Lineup() {
       <section className="hero" style={{ padding: '4rem 0' }}>
         <div className="container">
           <h1>Block Party Lineup</h1>
+          <div style={{ fontSize: '1.3rem', color: '#666', marginTop: '0.5rem', fontWeight: 500 }}>
+            Past, Present, Future Lineups
+          </div>
         </div>
       </section>
 

@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
-          <h1>South O Block Party</h1>
+          
           <p>Join us for an unforgettable celebration of music, community, and California sunshine</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/lineup" className="btn btn-primary">View Lineup</Link>
