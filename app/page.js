@@ -1,17 +1,49 @@
+
+"use client";
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          
-          <p>Join us for an unforgettable celebration of music, community, and California sunshine</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/lineup" className="btn btn-primary">View Lineup</Link>
-            <Link href="/volunteer" className="btn btn-secondary">Get Involved</Link>
+      <section className="hero" style={{ background: 'none', padding: '4rem 0 2rem 0' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <img 
+            src="/assets/images/webassets/SOBP-Hero.png" 
+            alt="South O Block Party Logo" 
+            style={{
+              maxWidth: '420px',
+              width: '100%',
+              height: 'auto',
+              margin: '0 auto 2.5rem',
+              display: 'block',
+              boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+              borderRadius: '18px'
+            }}
+          />
+          <div className="hero-whitebox">
+            <p style={{ color: '#111', marginBottom: '1.5rem', fontSize: '1.18rem', fontWeight: 500 }}>
+              Join us for an unforgettable celebration of music, community, and California sunshine
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/lineup" className="btn btn-primary">View Lineup</Link>
+              <Link href="/volunteer" className="btn btn-secondary">Get Involved</Link>
+            </div>
           </div>
+      <style jsx>{`
+        .hero-whitebox {
+          background: #fff;
+          color: #111;
+          border-radius: 18px;
+          box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+          padding: 2.5rem 2rem 2rem 2rem;
+          max-width: 480px;
+          margin: 0 auto 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      `}</style>
         </div>
       </section>
 
