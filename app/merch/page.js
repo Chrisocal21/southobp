@@ -4,115 +4,131 @@ import { useState } from 'react'
 export default function Merch() {
   const [cart, setCart] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [lightboxImg, setLightboxImg] = useState(null)
 
   const products = [
     {
       id: 1,
-      name: 'Classic South O Tee',
+      name: 'OG Block Party Tee',
       price: 25,
       category: 'apparel',
-      description: 'Soft cotton t-shirt with the classic South O Block Party logo.',
+      description: 'Soft cotton t-shirt with the original South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Ocean Blue', 'White', 'Black']
+      colors: ['Ocean Blue', 'White', 'Black'],
+      image: '/assets/images/merch/classic-sobp-t-shirt.png'
     },
     {
       id: 2,
-      name: 'Sunset Wave Tee',
+      name: 'OG Block Party Tank',
       price: 28,
       category: 'apparel',
-      description: 'Limited edition tee featuring a sunset wave design by a local artist.',
+      description: 'Tank top with the original South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Sunset Orange', 'Sand']
+      colors: ['Sunset Orange', 'Sand'],
+      image: '/assets/images/merch/classic-sobp-tank.png'
     },
     {
       id: 3,
-      name: 'Vintage Block Party Tee',
+      name: 'OG Block Party Sweater',
       price: 30,
       category: 'apparel',
-      description: 'Throwback style t-shirt with vintage South O graphics.',
+      description: 'Sweater with the original South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Heather Gray', 'Navy']
+      colors: ['Heather Gray', 'Navy'],
+      image: '/assets/images/merch/classic-sobp-sweater.png'
     },
     {
       id: 4,
-      name: 'South O Snapback Hat',
+      name: 'OG Block Party Snapback Trucker Hat',
       price: 22,
       category: 'accessories',
-      description: 'Snapback hat with embroidered South O Block Party logo.',
+      description: 'Snapback hat with the original South O Block Party logo.',
       sizes: ['One Size'],
-      colors: ['Black', 'Navy']
+      colors: ['Black', 'Navy'],
+      images: [
+        '/assets/images/merch/classic-sobp-trucker.png',
+        '/assets/images/merch/classic-sobp-trucker2.png' // Add your second image here
+      ]
     },
     {
       id: 5,
-      name: 'Festival Dad Hat',
+      name: 'OG Block Party Dad Hat',
       price: 20,
       category: 'accessories',
-      description: 'Relaxed fit dad hat with a small South O patch.',
+      description: 'Dad hat with the original South O Block Party logo.',
       sizes: ['One Size'],
-      colors: ['Khaki', 'Light Blue']
+      colors: ['Khaki', 'Light Blue'],
+      image: '/assets/images/merch/classic-sobp-dad.png'
     },
     {
       id: 6,
-      name: 'Block Party Crewneck',
+      name: 'OG Block Party Tote Bag',
       price: 40,
       category: 'apparel',
-      description: 'Cozy crewneck sweatshirt with bold South O print.',
+      description: 'Cozy crewneck sweatshirt with the original South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Forest Green', 'Gray']
+      colors: ['Forest Green', 'Gray'],
+      image: '/assets/images/merch/classic-sobp-tote.png'
     },
     {
       id: 7,
-      name: 'Sunset Zip Hoodie',
+      name: 'OG Block Party Zip Hoodie',
       price: 45,
       category: 'apparel',
-      description: 'Zip-up hoodie with a sunset back print and small chest logo.',
+      description: 'Zip-up hoodie  with the original South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Charcoal', 'Sunset Orange']
+      colors: ['Charcoal', 'Sunset Orange'],
+      image: '/assets/images/merch/classic-sobp-zipuphoodie.png'
     },
     {
       id: 8,
-      name: 'Classic Pullover Hoodie',
+      name: 'OG Block Party Pullover Hoodie',
       price: 42,
       category: 'apparel',
-      description: 'Classic pullover sweatshirt with South O Block Party chest print.',
+      description: 'Classic pullover sweatshirt  with the original South O Block Party logo.',
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-      colors: ['Navy', 'Heather Gray']
+      colors: ['Navy', 'Heather Gray'],
+      image: '/assets/images/merch/classic-sobp-pulloverhoodie.png'
     },
     {
       id: 9,
-      name: 'South O Sticker',
+      name: 'OG Block Party Sticker',
       price: 3,
       category: 'accessories',
       description: 'Vinyl sticker with the South O Block Party logo.',
       sizes: ['3" x 3"'],
-      colors: ['Full Color']
+      colors: ['Full Color'],
+      image: '/assets/images/merch/classic-sobp-sticker.png'
     },
     {
       id: 10,
-      name: 'Wave Sticker',
+      name: 'OG Block Party Patch',
       price: 3,
       category: 'accessories',
-      description: 'Vinyl sticker featuring a wave and sun design.',
+      description: 'Vinyl patch featuring a wave and sun design.',
       sizes: ['3" x 3"'],
-      colors: ['Full Color']
+      colors: ['Full Color'],
+      image: '/assets/images/merch/classic-sobp-patch.png'
     },
     {
       id: 11,
-      name: 'Keychain Bottle Opener',
+      name: 'OGKeychain Bottle Opener',
       price: 5,
       category: 'accessories',
       description: 'Handy keychain bottle opener with South O Block Party branding.',
       sizes: ['One Size'],
-      colors: ['Silver']
+      colors: ['Silver'],
+      image: '/assets/images/merch/classic-sobp-kbo.png'
     },
     {
       id: 12,
-      name: 'Block Party Koozie',
+      name: 'OG Block Party Koozie',
       price: 5,
       category: 'accessories',
       description: 'Keep your drink cold with a South O Block Party koozie.',
       sizes: ['One Size'],
-      colors: ['Blue', 'Black']
+      colors: ['Blue', 'Black'],
+      image: '/assets/images/merch/classic-sobp-koozie.png'
     }
   ]
 
@@ -128,9 +144,22 @@ export default function Merch() {
     ? products 
     : products.filter(product => product.category === selectedCategory)
 
+  // Track current image index for products with multiple images
+  const [imageIndexes, setImageIndexes] = useState({})
+
   const addToCart = (product) => {
     setCart([...cart, { ...product, id: Date.now() }])
     alert(`${product.name} added to cart!`)
+  }
+
+  const handleImageArrow = (productId, direction, imagesLength) => {
+    setImageIndexes(prev => {
+      const current = prev[productId] || 0
+      let next = direction === 'next' ? current + 1 : current - 1
+      if (next < 0) next = imagesLength - 1
+      if (next >= imagesLength) next = 0
+      return { ...prev, [productId]: next }
+    })
   }
 
   const getTotalItems = () => cart.length
@@ -183,34 +212,76 @@ export default function Merch() {
       <section className="section" style={{ paddingTop: '1rem' }}>
         <div className="container">
           <div className="products-grid">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="product-card">
-                <div className="product-image">
-                  <div className="coming-soon-badge">Coming Soon</div>
-                </div>
-                <div className="product-info">
-                  <h3>{product.name}</h3>
-                  <p className="product-description">{product.description}</p>
-                  <div className="product-options">
-                    <div className="option-group">
-                      <strong>Sizes:</strong> {product.sizes.join(', ')}
+            {filteredProducts.map((product) => {
+              // Support multiple images for Snapback Trucker Hat
+              const hasMultipleImages = Array.isArray(product.images)
+              const images = hasMultipleImages ? product.images : [product.image]
+              const currentImgIdx = imageIndexes[product.id] || 0
+              const currentImg = images[currentImgIdx]
+              return (
+                <div key={product.id} className="product-card">
+                  <div
+                    className="product-image"
+                    style={product.id === 1 ? { height: '260px', background: '#e9ecef' } : {}}
+                  >
+                    {currentImg ? (
+                      <>
+                        <img
+                          src={currentImg}
+                          alt={product.name}
+                          className={product.id === 1 ? 'product-img-fit product-img-large product-img-collar' : 'product-img-fit'}
+                          onClick={() => setLightboxImg(currentImg)}
+                          style={{ cursor: 'pointer' }}
+                        />
+                        {hasMultipleImages && (
+                          <div className="image-arrows">
+                            <button
+                              className="arrow-btn"
+                              aria-label="Previous image"
+                              onClick={e => { e.stopPropagation(); handleImageArrow(product.id, 'prev', images.length) }}
+                            >&#8592;</button>
+                            <button
+                              className="arrow-btn"
+                              aria-label="Next image"
+                              onClick={e => { e.stopPropagation(); handleImageArrow(product.id, 'next', images.length) }}
+                            >&#8594;</button>
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <div className="coming-soon-badge">Coming Soon</div>
+                    )}
+                  </div>
+                  {lightboxImg && (
+                    <div className="lightbox-overlay" onClick={() => setLightboxImg(null)}>
+                      <img src={lightboxImg} alt="Full Size Merch" className="lightbox-img" />
+                      <button className="lightbox-close" onClick={() => setLightboxImg(null)}>&times;</button>
                     </div>
-                    <div className="option-group">
-                      <strong>Colors:</strong> {product.colors.join(', ')}
+                  )}
+                  <div className="product-info">
+                    <h3>{product.name}</h3>
+                    <p className="product-description">{product.description}</p>
+                    <div className="product-options">
+                      <div className="option-group">
+                        <strong>Sizes:</strong> {product.sizes.join(', ')}
+                      </div>
+                      <div className="option-group">
+                        <strong>Colors:</strong> {product.colors.join(', ')}
+                      </div>
+                    </div>
+                    <div className="product-footer">
+                      <div className="price">TBA</div>
+                      <button 
+                        className="btn btn-primary"
+                        onClick={() => addToCart(product)}
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   </div>
-                  <div className="product-footer">
-                    <div className="price">TBA</div>
-                    <button 
-                      className="btn btn-primary"
-                      onClick={() => addToCart(product)}
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -287,6 +358,33 @@ export default function Merch() {
       </section>
 
       <style jsx>{`
+        .image-arrows {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          pointer-events: none;
+        }
+        .arrow-btn {
+          background: rgba(255,255,255,0.85);
+          border: none;
+          border-radius: 50%;
+          width: 36px;
+          height: 36px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #333;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          margin: 0 8px;
+          pointer-events: auto;
+          transition: background 0.2s;
+        }
+        .arrow-btn:hover {
+          background: #ffe066;
+        }
         .coming-soon-badge {
           display: flex;
           align-items: center;
@@ -356,12 +454,74 @@ export default function Merch() {
         }
         
         .product-image {
-          height: 200px;
+          height: 280px;
           background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
           display: flex;
           align-items: center;
           justify-content: center;
           border-bottom: 1px solid #eee;
+          padding: 0.5rem;
+          overflow: hidden;
+          position: relative;
+        }
+        .product-img-fit {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+          background: #f9f9f9;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          display: block;
+          transition: box-shadow 0.2s;
+        }
+        .product-img-fit:hover {
+          box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .product-img-large {
+          max-height: 300px;
+        }
+        .product-img-collar {
+          object-position: center -90px;
+        }
+
+        .lightbox-overlay {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0,0,0,0.85);
+          z-index: 1000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .lightbox-img {
+          max-width: 90vw;
+          max-height: 80vh;
+          border-radius: 18px;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+          background: #fff;
+        }
+        .lightbox-close {
+          position: absolute;
+          top: 32px;
+          right: 48px;
+          font-size: 2.5rem;
+          color: #fff;
+          background: none;
+          border: none;
+          cursor: pointer;
+          z-index: 1001;
+        }
+        @media (max-width: 600px) {
+          .lightbox-img {
+            max-width: 98vw;
+            max-height: 60vh;
+          }
+          .lightbox-close {
+            top: 12px;
+            right: 18px;
+            font-size: 2rem;
+          }
         }
         
         .product-placeholder {

@@ -28,8 +28,12 @@ export default function Header() {
     <header className="header">
       <nav className="container">
         <div className="nav-content">
-          <Link href="/" className="logo">
-            <h2>[SOBP]</h2>
+          <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img 
+              src="/assets/images/webassets/classic-sobp-gradient-transparent-prodfile.png" 
+              alt="South O Block Party Logo" 
+              className="sobp-header-logo"
+            />
           </Link>
           
           <div className={`nav-links ${mounted && mobileMenuOpen ? 'nav-open' : ''}`}>
@@ -69,18 +73,26 @@ export default function Header() {
           z-index: 1000;
           border-bottom: 1px solid rgba(255, 107, 53, 0.1);
         }
-        
+
         .nav-content {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1rem 0;
+          padding: 0.5rem 0 0.5rem 0;
+          min-height: 120px;
         }
-        
+
+        .sobp-header-logo {
+          height: 110px;
+          width: auto;
+          max-width: 400px;
+          object-fit: contain;
+          display: block;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
         .logo h2 {
-          color: var(--primary-color);
-          margin: 0;
-          font-size: 1.5rem;
+          display: none;
         }
         
         .nav-links {
@@ -156,8 +168,12 @@ export default function Header() {
         }
 
         @media (max-width: 768px) {
-          .logo h2 {
-            font-size: 1.2rem;
+          .nav-content {
+            min-height: 80px;
+          }
+          .sobp-header-logo {
+            height: 68px;
+            max-width: 240px;
           }
         }
       `}</style>
