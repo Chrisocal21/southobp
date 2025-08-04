@@ -87,29 +87,29 @@ export default function Home() {
               <p><strong>Music:</strong> 8+ Bands</p>
               <p><strong>Food:</strong> Local vendors, Food Trucks</p>
               <p><strong>Art:</strong> Local Artists, Live Murals</p>
-              <p><strong>Kids Zone:</strong> Kids area with activities, games, and more!</p>
+              <p><strong>All Ages, family-friendly!</strong> </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="section">
-        <div className="container" style={{ textAlign: 'center' }}>
-          <h2>Ready to Rock?</h2>
-          <p style={{ fontSize: '1.2rem', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
-            Don't miss out on Oceanside's biggest music celebration of the year.
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#tickets" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1.2rem 2.5rem' }}>
-               More Info
-            </a>
-            <Link href="/news" className="btn btn-secondary">Latest Updates</Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Quick Links */}
+        <section className="section">
+          <div className="container" style={{ textAlign: 'center' }}>
+            <h2>Ready to Rock?</h2>
+            <p style={{ fontSize: '1.2rem', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+          Don't miss out on South Oceanside's <span style={{ textDecoration: 'line-through' }}>smallest</span> biggest music celebration of the year.
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="#tickets" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '1.2rem 2.5rem' }}>
+             More Info
+          </a>
+          <Link href="/news" className="btn btn-secondary">Latest Updates</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Links */}
       <section className="section section-alt">
         <div className="container">
           <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Get Involved</h2>

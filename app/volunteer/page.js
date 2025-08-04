@@ -92,85 +92,68 @@ export default function Volunteer() {
           <p>Be part of the magic—help create an unforgettable South O Block Party experience for everyone!</p>
         </div>
       </section>
-
-      {/* Why Volunteer */}
-      <section className="section">
-        <div className="container">
-          <div className="volunteer-wrap">
-            <div className="volunteer-image volunteer-float">
-              <div className="volunteer-emoji-box">
-                🙋‍♀️
-              </div>
-            </div>
-            <div>
-              <h2>Why Volunteer?</h2>
-              <p>
-                The South O Block Party is powered by the heart and hustle of our volunteers. Whether you’re helping set up tents, running food, answering questions, or just spreading good vibes, you’ll be part of a team that makes the event possible.
-              </p>
-              <p>
-                Volunteering is about giving a little time and a lot of spirit—either showing up early to help us get the party started, or staying late to help us leave the space better than we found it. There’s a role for everyone, and every helping hand makes a difference.
-              </p>
-              <ul style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#555', marginBottom: '1.5rem' }}>
-                <li>🎵 <strong>Free festival access</strong> – Enjoy the music while you help</li>
-                <li>👕 <strong>Official volunteer t-shirt</strong> – Stand out as a Block Party hero</li>
-                <li>🤝 <strong>Meet awesome people</strong> – Make new friends and connections</li>
-                <li>🌟 <strong>Give back</strong> – Support your local community in a meaningful way</li>
-                <li>AM Shift – Help us get the party off the ground</li>
-                <li>PM Shift – Help us wrap it all up and celebrate a job well done</li>
-              </ul>
-              <p>
-                This is a volunteer position (not paid)—but it’s a position of pride. You’ll be part of the team in official South O Block Party shirts, ready to help guests, vendors, and artists, and keep the good times rolling.
-              </p>
-              <p>
-                Whether you’re here for the music, the art, the community, or just love being involved, we’d love to have you on board. Fill out the form below and we’ll reach out with more details and shift preferences. Let’s build something great—together!
-              </p>
-            </div>
+      <main>
+        <div className="grid grid-3 volunteer-opps-grid">
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>🌞 Volunteer at the South O Block Party</h3>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>Lend a hand. Share the vibes. Make memories.</p>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>The South O Block Party doesn’t happen without good people stepping up. If you’ve got some time, positive energy, and a love for this community — we want you on the team.</p>
           </div>
-        </div>
-      </section>
-
-      {/* Volunteer Opportunities */}
-      <section className="section section-alt">
-        <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Volunteer Opportunities</h2>
-          <div style={{ maxWidth: '700px', margin: '0 auto', marginBottom: '2.5rem', fontSize: '1.15rem', color: '#444', lineHeight: '1.7' }}>
-            <p>Thank you for your interest in volunteering at the South O Block Party! This event is powered by the community—and we couldn’t do it without folks like you.</p>
-            <p>As a volunteer, you’ll help set the stage or close things out by either assisting in the <strong>AM shift (setup)</strong> or <strong>PM shift (cleanup)</strong>. You might help with equipment, directing guests, supporting vendors, or just lending a hand where needed. Volunteers will wear official South O Block Party shirts and be the friendly faces of the event.</p>
-            <p>Please fill out the info below so we can get you set up with a shift, a shirt, and a role that suits you. We’ll be in touch soon!</p>
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>🙋‍♀️ Why Volunteer?</h3>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>Volunteers are the heartbeat of South O. From setup to cleanup, stage support to booth help, every task makes a difference. You're not just filling a spot — you're helping bring the whole thing to life.</p>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>And we mean it when we say thank you. Giving your time is a big deal, and we appreciate every minute of it.</p>
           </div>
-          <div className="grid grid-3 volunteer-opps-grid">
-            <div className="card volunteer-role"><h3>AM Shift</h3><p>Help us get the party off the ground! Set up tents, equipment, signage, and more.</p></div>
-            <div className="card volunteer-role"><h3>PM Shift</h3><p>Help us wrap it all up and leave the space better than we found it. Cleanup, breakdown, and support.</p></div>
-            <div className="card volunteer-role"><h3>Full Day</h3><p>Want to be part of it all? Join us for both AM and PM shifts!</p></div>
-            <div className="card volunteer-role"><h3>Event Setup</h3><p>Assist with setting up tents, tables, signage, and sound equipment before the event starts.</p></div>
-            <div className="card volunteer-role"><h3>Event Cleanup</h3><p>Help with post-event breakdown, trash/recycling, and making sure we leave the space spotless.</p></div>
-            <div className="card volunteer-role"><h3>Booth Assistance</h3><p>Support vendors and community booths with setup, customer service, and logistics.</p></div>
-            <div className="card volunteer-role"><h3>Food Station / BBQ Help</h3><p>Assist at food stations or the BBQ, helping serve and keep things running smoothly.</p></div>
-            <div className="card volunteer-role"><h3>Crowd Guidance / Guest Help</h3><p>Be a friendly face! Direct guests, answer questions, and help everyone have a great time.</p></div>
-            <div className="card volunteer-role"><h3>Equipment Setup (sound, tents, signage)</h3><p>Help with the technical side—setting up sound systems, tents, and event signage.</p></div>
-            <div className="card volunteer-role"><h3>Wherever Needed</h3><p>Just want to help? We’ll find a spot for you—flexible, all-around support wherever it’s needed most.</p></div>
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>Here’s what you’ll get for stepping up:</h3>
+            <ul style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem', listStyle: 'none', paddingLeft: 0 }}>
+              <li>🎟️ Free access to the party while you volunteer</li>
+              <li>👕 An official South O Volunteer T-Shirt</li>
+              <li>🤝 New friends, and great convos</li>
+              <li>🌊 A chance to give back to the place we call home</li>
+            </ul>
           </div>
-        </div>
-      </section>
-
-
-      {/* Volunteer Sign Up Button */}
-      <section className="section">
-        <div className="container">
-          <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ marginBottom: '2rem' }}>Sign Up to Volunteer</h2>
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>🛠️ How You’ll Help</h3>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>We’ll plug you into a role where help is most needed. Tasks could include:</p>
+            <ul style={{ fontSize: '1.05rem', color: '#555', lineHeight: '1.7', marginBottom: '0.7rem', columns: 2, maxWidth: '700px' }}>
+              <li>Event setup or takedown</li>
+              <li>Supporting vendors, artists, or musicians</li>
+              <li>Helping with BBQ or food stations</li>
+              <li>Guiding traffic or guests</li>
+              <li>Keeping things tidy during or after the event</li>
+              <li>General “jump in where needed” energy</li>
+            </ul>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>You don’t need experience — just a solid attitude and a willingness to help.</p>
+          </div>
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>⏰ Shift Options</h3>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>We’ve got two main shifts:</p>
+            <ul style={{ fontSize: '1.05rem', color: '#555', lineHeight: '1.7', marginBottom: '0.7rem', listStyle: 'none', paddingLeft: 0 }}>
+              <li><strong>Morning (AM)</strong> — Help us set up and kick off the day</li>
+              <li><strong>Evening (PM)</strong> — Close out the party and help clean up</li>
+            </ul>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>You can let us know your preference in the volunteer form.</p>
+          </div>
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>⚠️ Limited Volunteer Spots</h3>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>We’ve only got a certain number of volunteer spots available. If you’re interested, don’t wait — they fill up fast.</p>
+          </div>
+          <div className="card volunteer-role" style={{ gridColumn: '1 / -1', background: '#f8f9fa', border: '1.5px solid #e0e0e0', padding: '2rem 2.5rem', marginBottom: '1.5rem' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--primary-color, #1a4d2e)' }}>💬 Got Questions?</h3>
+            <p style={{ fontSize: '1.13rem', color: '#444', marginBottom: '0.7rem' }}>If you're unsure about anything or want to get in touch, use the Google Form (same one as the sign-up). There’s a space there for questions — we’ll get back to you!</p>
             <a
               href="https://forms.gle/PJDFegBR7jDZbSsr9"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary volunteer-signup-btn"
+              style={{ marginTop: '1.2rem' }}
             >
               Go to Volunteer Sign Up Form
             </a>
           </div>
         </div>
-      </section>
-
+      </main>
       <style jsx>{`
         .volunteer-wrap {
           position: relative;
@@ -225,57 +208,47 @@ export default function Volunteer() {
           background: var(--primary-color-dark, #1a4d2e);
           box-shadow: 0 4px 18px rgba(0,0,0,0.13);
         }
-
         .volunteer-role {
           text-align: center;
         }
-        
         .role-icon {
           font-size: 3rem;
           margin-bottom: 1rem;
         }
-        
         .role-details {
           margin-top: 1rem;
           padding-top: 1rem;
           border-top: 1px solid #eee;
           text-align: left;
         }
-        
         .perks ul {
           margin-top: 0.5rem;
           padding-left: 1.2rem;
         }
-        
         .perks li {
           font-size: 0.9rem;
           color: #666;
           margin-bottom: 0.3rem;
         }
-        
         .volunteer-form {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
         }
-        
         .form-row {
           display: flex;
           gap: 1rem;
         }
-        
         .form-group {
           flex: 1;
           display: flex;
           flex-direction: column;
         }
-        
         .form-group label {
           font-weight: 600;
           margin-bottom: 0.5rem;
           color: var(--dark-color);
         }
-        
         .form-group input,
         .form-group select,
         .form-group textarea {
@@ -285,20 +258,17 @@ export default function Volunteer() {
           font-size: 1rem;
           transition: border-color 0.3s ease;
         }
-        
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
           outline: none;
           border-color: var(--primary-color);
         }
-        
         .checkbox-group {
           display: flex;
           flex-direction: column;
           gap: 0.8rem;
         }
-        
         .checkbox-label {
           display: flex;
           align-items: center;
@@ -306,12 +276,10 @@ export default function Volunteer() {
           font-weight: normal !important;
           cursor: pointer;
         }
-        
         .checkbox-label input[type="checkbox"] {
           width: auto;
           margin: 0;
         }
-        
         @media (max-width: 768px) {
           .form-row {
             flex-direction: column;
